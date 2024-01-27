@@ -7,9 +7,7 @@ interface Props {
 
 const { title, description, page } = Astro.props;
 const image =
-  page === "travel"
-    ? `${Astro.url.origin}/globe_preview.webp"`
-    : `${Astro.url.origin}/me.webp`;
+  page === "travel";
 ---
 
 <!doctype html>
@@ -27,7 +25,7 @@ const image =
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url.origin} />
-    <meta property="og:image" content={image} />
+  
 
 
     <link rel="preconnect" href="https://cdn.fontshare.com" />

@@ -3,7 +3,6 @@ import Card from "./Card/index.astro";
 import Button from "./Button.astro";
 import { LINKS } from "../lib/constants";
 import { Icon } from 'astro-icon/components'
-import Tooltip from "./Tooltip/index";
 ---
 
 <Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
@@ -28,12 +27,7 @@ import Tooltip from "./Tooltip/index";
             <span class="sr-only">Linkedin Profile</span>
           </Button>
         </a>
-        <Tooltip client:visible>
-          <Button aria-label="easter egg btn">
-            <Icon name="ri:emotion-laugh-line" class="h-6" />
-            <span class="sr-only">Easter egg button</span>
-          </Button>
-        </Tooltip>
+        
       </div>
     
 </Card>

@@ -8,15 +8,11 @@ const subjects = ['Software Developement', 'Computer Science', 'Artificial Intel
     <p class="text-sm font-light">
       Hi, Ich bin Marcel und studiere an der Technischen Hochschule Ingolstadt im 6. Semester Bio- und Medizininformatik
       <br />
-       Der Schwerpunkt meines Studiums sind unter anderem
+       Der Schwerpunkt meines Studiums sind unter anderem  
       <ul>
-        <ul class="list-disc list-inside">
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Solidjs</li>
-          <li>Astro</li>
-          <li>svelte</li>
-          <li>Nodejs</li>
+        {subjects.map((subject, index) => (
+          <li ={index}>{subject}</li>
+        ))}
       </ul>
     </p>
     <p class="text-sm font-light">
