@@ -5,9 +5,9 @@ import MarkdownIt from 'markdown-it';
 const parser = new MarkdownIt();
 
 export async function GET(context) {
-  const blog = await getCollection("blog");
+  const blog = await getCollection("news");
   return rss({
-    title: "Gianmarco Cavallo’s Blog",
+    title: "Current news",
     description: "my blog",
     site: context.site,
     items: blog.map((post) => ({
