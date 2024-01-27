@@ -28,16 +28,12 @@ const image =
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url.origin} />
     <meta property="og:image" content={image} />
-    <!-- Basic Twitter Card tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
+
 
     <link rel="preconnect" href="https://cdn.fontshare.com" />
   </head>
   <body
-    class="bg-darkslate-700 md:h-screen flex flex-col justify-center items-center"
+    class="bg-lightgrey md:h-screen flex flex-col justify-center items-center"
   >
     <slot name="loader" />
     <slot />
