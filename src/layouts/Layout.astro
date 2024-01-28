@@ -7,8 +7,16 @@ interface Props {
   page?: "travel";
 }
 
+
 const { title, description, page } = Astro.props;
 ---
+
+<style>
+  .logo-image {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
 
 <BasicLayout title={title} description={description}>
   <div

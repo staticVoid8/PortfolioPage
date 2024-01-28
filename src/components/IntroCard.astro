@@ -5,7 +5,7 @@ import { Icon } from 'astro-icon/components'
 
 //Imports für images
 import { Image } from 'astro:assets';
-import shsImage from '/src/static/SHS.png';
+import shsImage from '/src/static/SHSP.png';
 import thiImage from '/src/static/thi.png';
 ---
 
@@ -20,13 +20,14 @@ import thiImage from '/src/static/thi.png';
           Hi, ich bin <b class="font-bold">Marcel Nhan</b>, ein Student der Bio- und Medizininformatik an der Technischen Hochschule Ingolstadt
         </p>
       </div>
+
+      <div class="flex gap-10">
         <!--THI Bild auf der linken Seite-->
-        <Image src={shsImage} alt="test"/>
+        <Image src={shsImage} alt="test" class="logo-image" style={{ width: '310px', height: 'auto' }}/>
         
-    
         <!--SHS Bild auf der rechten Seite -->
-        <Image src={thiImage} alt=" test" />
-
-
-      
+        <Image src={thiImage} alt="test" class="logo-image" style={{ width: '220px', height: 'auto' }}/>
+      </div>
+    </div>
+  </div>
 </Card>
