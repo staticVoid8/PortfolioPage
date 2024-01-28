@@ -14,8 +14,11 @@ interface Props {
 const { title, body, colSpan, rowSpan, href, colorText } = Astro.props;
 ---
 
-<div
-  class={`card group overflow-hidden transfor-y-[-40%] bg-grey-200 shadow-lg rounded-lg p-6 border border-darkslate-100 hover:border-primary-500 align-start flex-none justify-start relative transform perspective-1200 w-full transition duration-75 ease-in-out col-span-1 h-auto ${
+<!-- overflow-hidden: Inhalt der über Bereich hinausgeht, wird abgeschnitten, transfor-y-:Karte vertikal verschieben, bg: Background, shadow-lg: Schatten large, rounded-lg: Ecken, border border-darkslate-100: Grenzrahmen Karte, hover:border-primary=hover Farbe Rahmen, 
+ flex-none: Verhalten der Karte, nicht dehnen, w-full: Breite der Karte auf 100% des übergeordnetet Containers, transition duration: Übergangseffekt, ${colSpan || "md:col-span-2"}: Dynamische Abzahl Spalten für größere Bildschirmgrößen, h-auto: Höhe der Karte Auto,
+p-6: Padding für alle Seiten-->
+<div 
+  class={`card group overflow-hidden transfor-y-[-40%] bg-grey-200 shadow-lg rounded-md p-6 border border-darkslate-100 hover:border-primary-500 align-start flex-none justify-start relative transform perspective-1200 w-full transition duration-100 ease-in-out col-span-1 h-auto text-black ${
     colSpan || "md:col-span-2"
   } ${rowSpan || ""}`}
 >
