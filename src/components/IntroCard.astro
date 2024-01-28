@@ -7,6 +7,7 @@ import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets';
 import shsImage from '/src/static/SHSP.png';
 import thiImage from '/src/static/thi.png';
+import wepatoImage from '/src/static/WEPATO.jpg';
 ---
 
 <Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
@@ -17,16 +18,20 @@ import thiImage from '/src/static/thi.png';
         <!--Textformatierung für Willkommenspage-->
         <h6 class="text-sm font-light m-0 text-gray-500">Willkommen</h6>
         <p class="m-0 font-light text-xl">
-          Hi, ich bin <b class="font-bold">Marcel Nhan</b>, ein Student der Bio- und Medizininformatik an der Technischen Hochschule Ingolstadt
+          Hi, ich bin <b class="font-bold">Marcel Nhan</b>, ein Student der Bio- und Medizininformatik an der Technischen Hochschule Ingolstadt. 
+          <p>Zurzeit arbeite ich als Werkstudent bei Siemens Healthineers und bin nebenbei Co-Founder eines StartUps im Bereich Eventmanagement</p>
         </p>
       </div>
 
-      <div class="flex gap-10">
-        <!--THI Bild auf der linken Seite-->
-        <Image src={shsImage} alt="test" class="logo-image" style={{ width: '310px', height: 'auto' }}/>
-        
-        <!--SHS Bild auf der rechten Seite -->
-        <Image src={thiImage} alt="test" class="logo-image" style={{ width: '220px', height: 'auto' }}/>
+      <div class="flex gap-12">
+        <!--SHS Bild auf der linken Seite-->
+        <Image src={shsImage} alt="test" class="logo-image" style={{ width: '300px', height: '100' }}/>
+
+        <!--THI Bild in der Mitte -->
+        <Image src={thiImage} alt="test" class="logo-image" style={{ width: '170px', height: 'auto' }}/>
+
+        <!-- WEPATO Bild auf der rechten Seite -->
+        <Image src={wepatoImage} alt="test" class="logo-image" style={{width: '150px', height: 'auto'}}/>
       </div>
     </div>
   </div>
