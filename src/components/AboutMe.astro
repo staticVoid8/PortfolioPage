@@ -1,28 +1,71 @@
 ---
+import { Image } from "astro:assets";
 import Card from "./Card/index.astro";
-const subjects = ['Software Developement', 'Computer Science', 'Artificial Intelligence', 'Data Analytics, Life Sciences'] // nachtragen als const array
+import myImage from "/src/static/ME.png";
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="About me">
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="Über mich">
   <div class="flex flex-col gap-2">
+    <div class="flex justify-center gap-4">
+      <!--Profilbild auf der rechten Seite-->
+      <Image
+        src={myImage}
+        alt="MeinProfilbild"
+        class="logo-image rounded"
+        style={{ width: "35%", height: "auto", objectFit: "cover" }}
+      />
+    </div>
     <p class="text-sm font-light">
-      Hi, Ich bin Marcel und studiere an der Technischen Hochschule Ingolstadt im 6. Semester Bio- und Medizininformatik
+      Ich komme ursprünglich aus Nürnberg und habe vor meinem Studium eine
+      Ausbildung zum Patentanwaltsfachangestellten absolviert.
       <br />
-       Die Schwerpunkte meines Studiums sind unter anderem  
+      <br />
+      Die Schwerpunkte meines Studiums sind unter anderem
       <ul>
-
-
-          {subjects.map((subject) => (
-            <li ={index}>{subject}</li>
-          ))}
-       
-       
+        <li style={{ listStyle: "inside", listStyleType: "circle" }}>
+          Software Development
+        </li>
+        <li style={{ listStyle: "inside", listStyleType: "circle" }}>
+          Computer Science
+        </li>
+        <li style={{ listStyle: "inside", listStyleType: "circle" }}>
+          Artificial Intelligence
+        </li>
+        <li style={{ listStyle: "inside", listStyleType: "circle" }}>
+          Data Analytics
+        </li>
+        <li style={{ listStyle: "inside", listStyleType: "circle" }}>
+          Life Sciences
+        </li>
       </ul>
     </p>
     <p class="text-sm font-light">
-      
-    In meiner Freizeit treibe ich gerne Sport, gehe mit Freunden raus. Zu meinen größten Hobbys gehören Sport und Kochen, insbesondere die japanische und italienische Küche.
+      <br />
+      In meiner Freizeit treibe ich gerne Sport, treffe mich mit Freunden und koche
+      gerne.
     </p>
-  
   </div>
 </Card>
+
+
+
+<!--{
+const subjects = [
+  "Software Developement",
+  "Computer Science",
+  "Artificial Intelligence",
+  "Data Analytics",
+  "Life Sciences",
+];
+
+
+Ausgabe Subjects array
+          subjects.map((subject) => (
+            <li
+              key={subject}
+              style={{ listStyle: "inside", listStyleType: "circle" }}
+            >
+              {subject}
+            </li>
+          ))
+        } -->
